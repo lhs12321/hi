@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+    id "io.freefair.lombok" version "8.0.0-rc2"
+}
+
+group 'kr.mjc.lhs'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    //
+    implementation 'ch.qos.logback:logback-classic:1.+'
+    implementation 'org.mariadb.jdbc:mariadb-java-client:3.+'
+    implementation 'org.springframework:spring-context:6.+'
+    implementation 'org.springframework:spring-jdbc:6.+'
+}
+
+test {
+    useJUnitPlatform()
+}
